@@ -1,8 +1,8 @@
-import { Container, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
 
 
-export const Nav = () => {
+export const NavComp = () => {
     return (
         <>
             <Navbar className="bg-body-tertiary">
