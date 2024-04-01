@@ -5,8 +5,8 @@ import { Link, Outlet } from 'react-router-dom'
 export const NavComp = () => {
     return (
         <>
-            <Navbar className="bg-body-tertiary">
-                <Container>
+            <Navbar expand='lg' className="bg-body-tertiary">
+                <Container fluid>
                     <Navbar.Brand href="#home">
                         <img src={require('../../Assets/images/logo.png')}
                             width='100px'
@@ -15,9 +15,9 @@ export const NavComp = () => {
                         />
                     </Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
+                    <Navbar.Collapse className="justify-content-end" id="navbarScroll">
                         <Nav
-                            className="me-auto my-2 my-lg-0"
+                            className="my-2 my-lg-0"
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
