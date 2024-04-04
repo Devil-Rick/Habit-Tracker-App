@@ -1,11 +1,12 @@
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { Link, Outlet } from 'react-router-dom'
+import styles from './nav.module.css'
 
 
 export const NavComp = () => {
     return (
         <>
-            <Navbar expand='lg' className="bg-body-tertiary">
+            <Navbar expand='lg' className={styles.nav_bg}>
                 <Container fluid>
                     <Navbar.Brand href="#home">
                         <img src={require('../../Assets/images/logo.png')}

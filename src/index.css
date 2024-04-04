@@ -12,6 +12,24 @@ code {
     monospace;
 }
 
+.App{
+  /* background-color: aqua; */
+  background-image: url('./Assets/images/morning-Background.jpg');
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homepage{
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: rgb(255 255 255 / 49%) !important;
+}
 
 .navbar-text {
   margin-right: 10px;
@@ -20,4 +38,10 @@ code {
 
 .linkStyle{
   text-decoration: none;
+}
+
+.display{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

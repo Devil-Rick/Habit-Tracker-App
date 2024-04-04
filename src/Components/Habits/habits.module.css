@@ -1,0 +1,23 @@
+.modal, .title{
+    justify-content: center;
+}
+
+.modalContent{
+    width: 70% !important;
+    text-align: center !important;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.submit{
+    background-color: rgb(7, 152, 7) !important; 
+}
+
+.close{
+    background-color: rgb(237, 37, 37) !important;
+}
