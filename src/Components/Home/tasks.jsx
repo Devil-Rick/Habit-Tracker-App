@@ -1,11 +1,16 @@
-import { Button, Card } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import styles from './home.module.css'
 import { useState } from 'react';
 import AddHabit from '../Habits/addHabit';
+import Suggestions from './suggestion';
 
 function HabitsContainer() {
 
     const [newHabit, setNewHabit] = useState(false);
+
+    const add = () => {
+        setNewHabit(true);
+    }
 
     return (
         <div className={styles.habits}>
@@ -14,11 +19,13 @@ function HabitsContainer() {
                 <Button onClick={() => setNewHabit(true)}>Add Habit +</Button>
             </div>
 
-            <Card className={styles.cardStyle} onClick={() => setNewHabit(true)}>
-                <Card.Body className={styles.body}>
-                    This is some text within a card body.
-                </Card.Body>
-            </Card>
+            {/* Creating the list of suggestions */}
+            <div className={styles.suggestion}>
+                <Suggestions habit={add} />
+            </div>
+
+
+            {/* Accessing the add habit component */}
             <AddHabit
                 show={newHabit}
                 onHide={() => setNewHabit(false)}

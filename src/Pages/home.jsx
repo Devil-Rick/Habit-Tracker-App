@@ -1,6 +1,6 @@
 import Getimage from "../Components/Home/motivationCarousal"
 import HabitsContainer from "../Components/Home/tasks"
-import { DisplayImage } from "../data/displayImages"
+import { DisplayImage } from "../Assets/data/displayImages"
 
 export const Home = () => {
     return (

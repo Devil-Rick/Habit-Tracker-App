@@ -12,7 +12,13 @@ code {
     monospace;
 }
 
-.App{
+h1,
+h2 {
+  color: #00063b !important;
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+.App {
   /* background-color: aqua; */
   background-image: url('./Assets/images/morning-Background.jpg');
   height: 100vh;
@@ -21,9 +27,14 @@ code {
   background-size: cover;
 }
 
-.homepage{
+.homepage {
   text-align: center;
   padding: 10px 50px;
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 4.5rem;
+  }
 }
 
 .bg-body-tertiary {
@@ -36,12 +47,25 @@ code {
   text-transform: uppercase;
 }
 
-.linkStyle{
+.linkStyle {
   text-decoration: none;
 }
 
-.display{
+.display {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+
+
+
+/************************ Media Queries ****************************/
+@media screen and (max-width: 992px) {
+  .App{
+    height: auto;
+  }
+  .display {
+    flex-direction: column;
+  }
 }

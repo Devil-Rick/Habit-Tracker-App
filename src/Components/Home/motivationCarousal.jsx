@@ -7,7 +7,7 @@ function Getimage({ images }) {
             {images.map((img,index) => {
                 return (
                     <Carousel.Item key={index} interval={5000}>
-                        <img className="d-block w-100" src={img.url} alt={`Motivation: ${index}`} />
+                        <img className={`d-block w-100 ${styles.image}`} src={img.url} alt={`Motivation: ${index}`} />
                     </Carousel.Item>
                 )
             })}

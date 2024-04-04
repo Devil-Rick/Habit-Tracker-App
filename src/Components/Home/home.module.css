@@ -2,34 +2,81 @@
     width: 40%;
 }
 
-.carousel-indicators{
+.carousel-indicators {
     display: none;
 }
 
-.habits{
+.habits {
     height: 70vh;
     width: 35%;
     background-color: #7188f14f;
     padding: 20px;
     box-shadow: inset 0 0 60px -25px black;
     border-radius: 5px;
-    overflow: hidden;
 }
 
-.cardStyle{
+.cardStyle {
     cursor: pointer;
     margin: 10px;
     background-color: #00000070 !important;
     color: #feffc5 !important;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.cardStyle .body{
-    padding: 5px;
+.suggestion {
+    overflow: overlay;
+    height: 90%;
 }
 
+.suggestion::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.suggestion {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.cardStyle .body {
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+/************************ Media Queries ****************************/
+
+@media screen and (max-width: 992px) {
+    .carousel {
+        width: 100%;
+    }
+    .image{
+        height: 50vh;
+    }
+    .habits{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .header{
+        flex-direction: column;
+    }
+}
