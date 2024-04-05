@@ -1,10 +1,19 @@
 import { Button, Modal } from "react-bootstrap";
 import styles from "./habits.module.css"
+import { useState } from "react";
 
-export default function AddHabit(props) {
+export default function AddHabit({show, onHide, submit, value}) {
+
+    const [newHabit, setNewhabit] = useState()
+
+    const handleSubmit = (val = value) => {
+        submit(val)
+    }
+
     return (
         <Modal
-            {...props}
+            show={show} 
+            onHide={onHide}
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
@@ -17,10 +26,17 @@ export default function AddHabit(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <input name="newHabit" id="add" placeholder='Track your Habit...'></input>
+                <input name="newHabit"
+                    id="add"
+                    placeholder='Track your Habit...'
+                    onChange={(e) => {setNewhabit(e.target.value)}}
+                    defaultValue={value}
+                    required
+                />
+
                 <div className={styles.buttonContainer}>
-                    <Button onClick={props.onHide} className={styles.submit}>Submit</Button>
-                    <Button onClick={props.onHide} className={styles.close}>Close</Button>
+                    <Button onClick={() => {handleSubmit(newHabit)}} className={styles.submit}>Submit</Button>
+                    <Button onClick={onHide} className={styles.close}>Close</Button>
                 </div>
             </Modal.Body>
         </Modal>

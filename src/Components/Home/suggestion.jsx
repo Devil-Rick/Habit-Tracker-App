@@ -1,13 +1,13 @@
 import { Card } from "react-bootstrap";
 import styles from './home.module.css'
-import { SuggestedHabit } from "../../Assets/data/habit_info";
 
-export default function Suggestions({ habit }) {
+export default function Suggestions({ habit, habitList }) {
+
     return (
         <>
-            {SuggestedHabit.map((h) => {
+            {habitList.map((h) => {
                 return (
-                    <Card key={h.id} className={styles.cardStyle} onClick={habit}>
+                    <Card key={h.id} className={styles.cardStyle} onClick={() => habit(h.habit)}>
                         <Card.Body className={styles.body}>
                             {h.habit}
                             <span>
