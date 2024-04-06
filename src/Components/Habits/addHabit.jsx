@@ -6,8 +6,13 @@ export default function AddHabit({show, onHide, submit, value}) {
 
     const [newHabit, setNewhabit] = useState()
 
-    const handleSubmit = (val = value) => {
-        submit(val)
+    const handleSubmit = (val) => {
+        if (val == null) {
+            submit(value)
+        } else {
+            submit(val)
+        }
+        setNewhabit(null)
     }
 
     return (

@@ -9,8 +9,8 @@ export const Home = () => {
                 Home Page
             </h1>
             <div className='display'>
-                <Getimage images={DisplayImage} />
-                <HabitsContainer />
+                <Getimage images={DisplayImage} /> {/* imager carousal */}
+                <HabitsContainer /> {/* suggested habits container */}
             </div>
         </div>
     )
