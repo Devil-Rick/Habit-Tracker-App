@@ -1,23 +1,56 @@
-.modal, .title{
+.modal,
+.title {
     justify-content: center;
 }
 
-.modalContent{
+.modalContent {
     width: 70% !important;
     text-align: center !important;
 }
 
-.buttonContainer{
+.buttonContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 1rem;
 }
 
-.submit{
-    background-color: rgb(7, 152, 7) !important; 
+.submit {
+    background-color: rgb(7, 152, 7) !important;
 }
 
-.close{
+.close {
     background-color: rgb(237, 37, 37) !important;
+}
+
+.btnContainer {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    justify-content: space-evenly;
+
+    .button {
+        font-size: xx-large;
+        padding: 15px 10px;
+    }
+}
+
+.habits {
+    height: 70vh;
+    width: 35%;
+    background-color: #7188f14f;
+    padding: 20px;
+    box-shadow: inset 0 0 60px -25px black;
+    border-radius: 5px;
+}
+
+.status {
+    width: 70%;
+    padding: 20px 20px 0;
+    margin-left: 10px;
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

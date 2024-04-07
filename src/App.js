@@ -3,6 +3,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Habits } from './Pages/habits';
 import { Home } from './Pages/home';
 import { NavComp } from './Components/Navbar/nav';
+import WeekTracker from './Components/Habits/week';
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
       {
         path: 'habits', element: <Habits/>,
         children: [
-          { path: 'weekly', element: <h1>Weekly Basis</h1> },
+          { path: 'weekly/:id', element: <WeekTracker /> },
           { path: 'monthly', element: <h1>Monthly Basis</h1> },
         ]
       },

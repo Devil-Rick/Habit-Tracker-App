@@ -2,13 +2,13 @@ import { Button, Modal } from "react-bootstrap";
 import styles from "./habits.module.css"
 import { useState } from "react";
 
-export default function AddHabit({show, onHide, submit, value}) {
+export default function AddHabit({show, onHide, submit, value, url}) {
 
     const [newHabit, setNewhabit] = useState()
 
     const handleSubmit = (val) => {
         if (val == null) {
-            submit(value)
+            submit(value,url)
         } else {
             submit(val)
         }
