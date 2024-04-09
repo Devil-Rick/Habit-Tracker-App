@@ -45,12 +45,74 @@
 }
 
 .status {
-    width: 70%;
+    width: 70% !important;
     padding: 20px 20px 0;
     margin-left: 10px;
+
     .header {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
+}
+
+.weekStatus {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+}
+
+.dailyStatus {
+    margin: 0 15px 20px;
+    background-color: #001cff !important;
+    color: #ffffff !important;
+}
+
+.disStatus {
+    margin: 0 15px 20px;
+    background-color: #2cf5d776 !important;
+}
+
+.btnHolder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btnStyle {
+    width: 2rem;
+    height: 2rem;
+    padding: 0 !important;
+    border-radius: 30px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background-color: #00000061 !important;
+}
+
+.btnDone:hover{
+    background-color: #79f825de !important;
+
+    svg {
+        color: #000;
+    }
+
+}
+
+.btnCross:hover{
+    background-color: #fa3434ec !important;
+
+    svg {
+        color: #000;
+    }
+
+}
+
+.btnLeft:hover{
+    background-color: #ffff2fde !important;
+
+    svg {
+        color: #000;
+    }
+
 }

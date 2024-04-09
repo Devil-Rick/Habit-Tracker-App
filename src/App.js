@@ -5,6 +5,7 @@ import { Home } from './Pages/home';
 import { NavComp } from './Components/Navbar/nav';
 import WeekTracker from './Components/Habits/week';
 
+
 function App() {
 
   // creating routes
@@ -22,7 +23,9 @@ function App() {
         ]
       },
     ]
-  }])
+  }
+
+])
 
   return (
     <div className="App">

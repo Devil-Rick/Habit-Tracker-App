@@ -1,19 +1,33 @@
 import { Button } from "react-bootstrap";
 import styles from "./habits.module.css"
+import { BsThreeDots } from "react-icons/bs";
+import { ImCross } from "react-icons/im";
+import { MdDoneAll } from "react-icons/md";
 
 
-export default function ButtonContainer() {
+export default function ButtonContainer({dayitem, day}) {
     return (
-        <div className={styles.btnContainer} >
-            <Button className={styles.button} >
-                Weekly
+        <>
+            <Button
+                className={`${styles.btnStyle} ${styles.btnDone}`}
+                disabled={(dayitem.day === day) ? false : true}
+            >
+                <MdDoneAll />
             </Button>
-            <Button className={styles.button} >
-                Add Habit +
+            <Button
+                className={`${styles.btnStyle} ${styles.btnCross}`}
+                variant="primary"
+                disabled={(dayitem.day === day) ? false : true}
+            >
+                <ImCross />
             </Button>
-            <Button className={styles.button} >
-                Monthly
+            <Button
+                className={`${styles.btnStyle} ${styles.btnLeft}`}
+                variant="primary"
+                disabled={(dayitem.day === day) ? false : true}
+            >
+                <BsThreeDots />
             </Button>
-        </div>
+        </>
     )
 }
