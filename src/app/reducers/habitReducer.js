@@ -26,9 +26,10 @@ const habitSlice = createSlice({
                 id: action.payload.id,
                 habit: action.payload.habitName,
                 url: action.payload.url,
+                day: state.day,
             }]
         },
-        setDay:(state, action) => {
+        setDay: (state, action) => {
             state.day = state.day.map((day, index) => {    // getday = 2 , index = 0 - 2 = -2
                 let date = new Date();
                 date.setDate(date.getDate() + (index - action.payload.getday))
@@ -36,10 +37,34 @@ const habitSlice = createSlice({
                 return (
                     {
                         day: day.day,
-                        dateTime: date.toLocaleString().split(',')[0]
+                        dateTime: date.toLocaleString().split(',')[0],
+                        done: false,
+                        notDone: false,
+                        skip: false,
                     }
                 )
             })
+        },
+        validate: (state, action) => {
+            switch (action.payload.val) {
+                case 'done':
+                    state.habits[action.payload.id - 1].day[action.payload.getday].done = true;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].notDone = false;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].skip = false;
+                    break;
+                case 'notDone':
+                    state.habits[action.payload.id - 1].day[action.payload.getday].done = false;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].notDone = true;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].skip = false;
+                    break;
+                case 'skip':
+                    state.habits[action.payload.id - 1].day[action.payload.getday].done = false;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].notDone = false;
+                    state.habits[action.payload.id - 1].day[action.payload.getday].skip = true;
+                    break;
+                default:
+                    break;
+            }
         },
         setToday: (state, action) => {
             state.today = state.day[action.payload.getday].day

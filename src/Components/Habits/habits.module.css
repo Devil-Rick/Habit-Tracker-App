@@ -90,7 +90,7 @@
     background-color: #00000061 !important;
 }
 
-.btnDone:hover{
+.btnDone:hover {
     background-color: #79f825de !important;
 
     svg {
@@ -99,7 +99,15 @@
 
 }
 
-.btnCross:hover{
+.done {
+    background-color: #79f825de !important;
+
+    svg {
+        color: #000;
+    }
+}
+
+.btnCross:hover {
     background-color: #fa3434ec !important;
 
     svg {
@@ -108,11 +116,27 @@
 
 }
 
-.btnLeft:hover{
+.cross {
+    background-color: #fa3434ec !important;
+
+    svg {
+        color: #000;
+    }
+}
+
+.btnLeft:hover {
     background-color: #ffff2fde !important;
 
     svg {
         color: #000;
     }
 
+}
+
+.skip {
+    background-color: #ffff2fde !important;
+
+    svg {
+        color: #000;
+    }
 }

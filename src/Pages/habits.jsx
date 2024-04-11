@@ -8,11 +8,13 @@ import { useState } from "react"
 export const Habits = () => {
     const habitList = useSelector(habitsList)
     const [name, setName] = useState();
+    const [id, setId] = useState();
 
     const navigate = useNavigate();
 
     const track =  (habit, url, id) => {
         setName(habit);
+        setId(id)
         navigate(`/habits/weekly/${id}`);
     }
 
@@ -30,7 +32,7 @@ export const Habits = () => {
                         <Button>Add New Habit</Button>
                     </Link>
                 </div>
-                <Outlet context={(name)}/>
+                <Outlet context={{name, id}}/>
             </div>
         </div>
     )
